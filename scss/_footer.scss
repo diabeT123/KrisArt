@@ -1,0 +1,52 @@
+.footer {
+    background: $darkblue;
+    padding: 100px 0 200px;
+    font-family: Roboto Slab;
+    margin-top: -2px; // Для gsap
+}
+
+.footer__inner {
+}
+.footer__list {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+.footer__list-item:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer__list-logo {
+    font-size: 80px;
+    color: $milk;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: Dancing Script;
+}
+.footer__list-text {
+    font-size: 18px;
+    color: $lightred;
+    max-width: 400px;
+}
+.footer__list-title {
+    color: $milk;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.footer__list-social {
+    color: $milk;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.5;
+    transition: all .5s;
+    img{
+        max-width: 20px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}

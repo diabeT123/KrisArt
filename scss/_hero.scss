@@ -1,0 +1,50 @@
+
+.hero {
+    background-color: $darkblue;
+    background-image: url("../images/15.png"), url("../images/16.jpg");
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    background-position: 47vw;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -2px; // Для скролл триггера
+    &::before{
+        content: "";
+        width: 50vw;
+        height: 900px;
+        background: url("../images/16.png") 0px 0px / 60% no-repeat;
+        position: absolute;
+        z-index: -1;
+        opacity: 50%;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+.hero__inner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.hero__content {
+    margin-left: 80px;
+}
+.hero__image-box {
+    img{
+        width: 100%;
+        max-width: 800px;
+    }
+    
+}
+.hero__title {
+    font-size: 12vw;
+    color: $milk;
+    font-family: Dancing Script;
+
+}
+.hero__subtitle {
+    font-size: 3vw;
+    color: $lightblue;
+    font-family: Marck Script; 
+}

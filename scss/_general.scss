@@ -1,0 +1,41 @@
+$darkblue: #212d38 ;
+$brown:#42363d;
+$red:#7c2d38;
+$lightred:#C96567;
+$lightblue: #97AABD;
+$milk:#fffaf0;
+
+.wrapper{
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+%flex-row {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+%flex-center{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero__gsap{
+    background: $darkblue;
+    
+}
+
