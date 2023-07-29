@@ -26,7 +26,7 @@ var aboutSlider = new Swiper('.about__slider', {
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 
-if (ScrollTrigger.isTouch !== 1) {
+if (1) {
 
     ScrollSmoother.create({
         wrapper: '.wrapper',
@@ -58,7 +58,7 @@ if (ScrollTrigger.isTouch !== 1) {
             opacity: 1, x: 0,
             scrollTrigger: {
                 trigger: item,
-                start: '-900',
+                start: '-1500',
 
 
 
@@ -268,8 +268,21 @@ if (ScrollTrigger.isTouch !== 1) {
 let popup = document.querySelector('.popup');
 let aboutButton = document.querySelector('.about__button');
 
-aboutButton.addEventListener('click', function(e){
+aboutButton.addEventListener('click', function (e) {
     e.preventDefault();
-    popup.classList.add('popup-open') ;
+    popup.classList.add('popup-open');
 })
 
+const addPrefix = (array, prefix) => {
+
+    for (let i = 0; i < array.length; i++) {
+
+        array[i] = `${prefix} ${array[i]}`
+
+    }
+    return array;
+}
+
+let array = [1, 2, 3, 4];
+let prefix = 'Muradik';
+console.log(addPrefix(array, prefix));

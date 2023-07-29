@@ -85,7 +85,7 @@ a {
   margin: 0 auto;
 }
 
-.popup__inner, .works__inner, .about__inner {
+.popup__inner, .about__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,7 +97,7 @@ a {
 
 .hero {
   background-color: #212d38;
-  background-image: url("../images/15.png"), url("../images/16.jpg");
+  background-image: url("../images/15.png");
   background-repeat: no-repeat;
   background-size: 40vw;
   background-position: 47vw;
@@ -106,16 +106,18 @@ a {
   z-index: 2;
   margin-bottom: -2px;
 }
-.hero::before {
-  content: "";
-  width: 50vw;
-  height: 900px;
-  background: url("../images/16.png") 0px 0px/60% no-repeat;
+
+.hero__bg-image-1 {
   position: absolute;
+  top: -130px;
+  left: 0px;
   z-index: -1;
-  opacity: 50%;
-  top: 200px;
-  left: 200px;
+  opacity: 0.2;
+  transform: rotate(340deg);
+}
+.hero__bg-image-1 img {
+  max-width: 250px;
+  width: 100%;
 }
 
 .hero__inner {
@@ -126,6 +128,7 @@ a {
 
 .hero__content {
   margin-left: 80px;
+  position: relative;
 }
 
 .hero__image-box img {
@@ -145,6 +148,70 @@ a {
   font-family: Marck Script;
 }
 
+@media (max-width: 900px) {
+  .hero__title {
+    font-size: 17vw;
+  }
+  .hero__subtitle {
+    font-size: 4vw;
+  }
+  .hero__bg-image-1 {
+    left: 0px;
+  }
+  .hero__bg-image-1 img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 750px) {
+  .hero {
+    background-size: 50vw;
+  }
+  .hero__title {
+    font-size: 16vw;
+  }
+  .hero__subtitle {
+    font-size: 4vw;
+  }
+  .hero__bg-image-1 {
+    left: 0px;
+  }
+  .hero__bg-image-1 img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    background-size: 90vw;
+    background-position: 20px 70px;
+  }
+  .hero__inner {
+    justify-content: center;
+  }
+  .hero__content {
+    margin: 0;
+  }
+  .hero__title {
+    font-size: 80px;
+    margin: 75vw 0 0 0;
+    text-align: center;
+  }
+  .hero__subtitle {
+    font-size: 30px;
+  }
+  .hero__bg-image-1 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .hero__title {
+    font-size: 75px;
+    margin: 40vw 0 0 0;
+    text-align: center;
+  }
+  .hero__subtitle {
+    font-size: 25px;
+  }
+}
 .about {
   background-color: #212d38;
   padding: 200px 0 100px;
@@ -303,6 +370,12 @@ a {
   font-family: Roboto Slab;
   padding: 0px 0 500px;
   position: relative;
+}
+
+.works__inner {
+  display: flex;
+  align-items: center;
+  gap: 200px;
 }
 
 .works__list:first-child {

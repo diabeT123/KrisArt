@@ -7,7 +7,9 @@
 }
 
 .works__inner {
-    @extend %flex-row;
+   display: flex;
+   align-items: center;
+   gap: 200px;
 }
 
 .works__list:first-child {
