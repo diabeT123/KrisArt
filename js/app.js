@@ -26,7 +26,7 @@ var aboutSlider = new Swiper('.about__slider', {
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 
-if (1) {
+if (window.innerWidth>600) {
 
     ScrollSmoother.create({
         wrapper: '.wrapper',
@@ -265,24 +265,20 @@ if (1) {
 
 // Анимация попапа
 
-let popup = document.querySelector('.popup');
-let aboutButton = document.querySelector('.about__button');
+const popup = document.querySelector('.popup');
+const popupIcon = document.querySelector('.popup__icon');
+const aboutButton = document.querySelector('.about__button');
+const overlay = document.querySelector('.overlay') 
 
 aboutButton.addEventListener('click', function (e) {
     e.preventDefault();
     popup.classList.add('popup-open');
+    overlay.classList.add('overlay-open');
 })
 
-const addPrefix = (array, prefix) => {
+popupIcon.addEventListener('click', () => {
 
-    for (let i = 0; i < array.length; i++) {
+    popup.classList.remove('popup-open');
+    overlay.classList.remove('overlay-open');
 
-        array[i] = `${prefix} ${array[i]}`
-
-    }
-    return array;
-}
-
-let array = [1, 2, 3, 4];
-let prefix = 'Muradik';
-console.log(addPrefix(array, prefix));
+})

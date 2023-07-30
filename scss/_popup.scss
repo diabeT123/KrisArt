@@ -4,16 +4,17 @@
     height: 600px;
     background: $milk;
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 20;
     padding: 40px;
     transition: all .6s;
     visibility: hidden;
     opacity: 0;
     font-family: Roboto Slab;
+    box-shadow: 0px 0px 50px rgb(20, 20, 20);
 }
 
 .popup__icon{
@@ -69,5 +70,36 @@
 .popup__image-box {
     img{
         max-width: 400px;
+    }
+}
+
+@media(max-width:900px){
+    .popup{
+        max-width: 600px;
+    }
+    .popup__image-box{
+        img{
+            max-width: 300px;
+        }
+    }
+}
+@media(max-width:650px){
+    .popup{
+        max-width: 400px;
+    }
+    .popup__image-box{
+        img{
+            max-width: 200px;
+        }
+    }
+    .popup__inner{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+@media(max-width:650px){
+    .popup{
+        max-width: 300px;
     }
 }
